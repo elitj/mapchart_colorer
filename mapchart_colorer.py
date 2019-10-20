@@ -159,10 +159,8 @@ borders = [2000000,10000,5000,1800,800,300,0,-300,-800,-1800,-5000,-10000,-20000
 
 
 # Edit .ods path and sheet name below:
-#data = get_data("C:/path/to/your_data.ods")
-#sheet = data["your_sheet_name"]
-data = get_data("C:/Users/User/Documents/States/by_trend.ods")
-sheet = data["by_trend"]
+data = get_data("C:/path/to/your_data.ods")
+sheet = data["your_sheet_name"]
 sheet.pop(0)                       #Comment out if first row is not headers
 
 try:
@@ -173,4 +171,4 @@ except WDE:
     browser.quit()
     exit()
     
-color_map(colors,borders,sheet,0,1,18)
+color_map(colors,borders,sheet)
